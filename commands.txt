@@ -1,3 +1,43 @@
 import pandas as pd
 
-pd.DataFrame(value) -- creates a data fram
+d=pd.DataFrame({'Name':['Shobhit','vaibhav',
+                                'vimal','Sourabh'],
+                         
+                        'Class':[11,12,10,9],
+                        'Age':[18,20,21,17]}) -- creates a data frame with name,class,age as columns
+                        
+pd.read_csv(path)    ----to read the csv file
+
+d.rename(column={'Name':'FirstName'})      --- creates a dataframe object whose Name will be cahnged to FirstName but doesnt effect the original dataframe d
+
+d.rename(column={'Name':'FirstName'},inplace=True) --- directly modifies the original dataframe d name column to firstname
+
+li=[[1,2,3],[4,5,6],[8,9,8],[4,3,2],[1,3,4]]
+df=pd.DataFrame(li)
+	 0  1  2
+0  1  2  3
+1  4  5  6
+2  8  9  8
+3  4  3  2
+4  1  3  4
+
+df[1][1]=5  --[column][row]
+df[1:4]  
+
+  0	1	2
+1	4	5	6
+2	8	9	8
+3	4	3	2
+
+df[1:4][2] --slicing picks rows from 1-3 and picks the 2 col in that
+1    6
+2    8
+3    2
+
+df[1:4][0:2]   -- 1:4 picks 1-3 rows and 0:1 picks 0,1  rows in 1:4 output since the second par is also slicing
+  0	1	2
+1	4	5	6
+2	8	9	8
+
+
+
